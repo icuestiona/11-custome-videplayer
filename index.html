@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Custome VideoPlayer</title>
+  </head>
+  <body>
+    <div class="player">
+      <video
+        class="my-video"
+        src="video-gaudi.mp4"
+        width="640"
+        height="480"
+      ></video>
+
+      <div class="control-bar">
+        <div class="progress">
+          <div class="progress-filled"></div>
+        </div>
+        <button class="play-pause-toggle" title="toggle-play">►</button>
+        <input
+          type="range"
+          name="volume-slider"
+          class="player-slider"
+          min="0"
+          max="1"
+          step="0.5"
+          value="1"
+        />
+        <input
+          type="range"
+          name="play-back"
+          class="player-slider"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+        <button data-skip="-10" class="player-button">« 10s</button>
+        <button data-skip="20" class="player-button">20s »</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
