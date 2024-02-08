@@ -7,22 +7,25 @@
     <title>Custome VideoPlayer</title>
   </head>
   <body>
+    <h1 class="video-title">Gaudi's Legacy</h1>
     <div class="player">
       <video
-        class="my-video"
+        autoplay
+        loop
         src="video-gaudi.mp4"
-        width="640"
-        height="480"
+        class="my-video viewer"
+        type="video/mp4"
+        muted
+        playsinline
       ></video>
-
       <div class="control-bar">
         <div class="progress">
           <div class="progress-filled"></div>
         </div>
-        <button class="play-pause-toggle" title="toggle-play">►</button>
+        <button class="player-button toggle" title="Toggle Play">►</button>
         <input
           type="range"
-          name="volume-slider"
+          name="volume"
           class="player-slider"
           min="0"
           max="1"
@@ -39,7 +42,7 @@
           value="1"
         />
         <button data-skip="-10" class="player-button">« 10s</button>
-        <button data-skip="20" class="player-button">20s »</button>
+        <button data-skip="10" class="player-button">10s »</button>
       </div>
     </div>
     <script src="script.js"></script>
